@@ -6,10 +6,16 @@ class Sensor {
     this.raySpread = Math.PI / 2
 
     this.rays = []
+    this.readings = []
   }
 
-  update() {
+  update(roadBorders) {
     this.#castRace()
+
+    this.readings = []
+    for (let i = 0; i < this.rays.length; i++) {
+      this.readings.push(this.#getReading(this.rays[i], roadBorders))
+    }
   }
 
   #castRace() {
@@ -33,6 +39,8 @@ class Sensor {
       this.rays.push([start, end])
     }
   }
+
+  #getReading(ray, roadBorders) {}
 
   draw(ctx) {
     for (let i = 0; i < this.rayCount; i++) {
