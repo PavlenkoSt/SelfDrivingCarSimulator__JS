@@ -10,34 +10,34 @@ class Controls {
 
   #addKeyboardListeners() {
     document.onkeydown = () => {
-      switch(event.key) {
-        case "ArrowLeft":
+      switch (event.key) {
+        case 'ArrowLeft':
           this.left = true
           break
-        case "ArrowRight":
+        case 'ArrowRight':
           this.right = true
           break
-        case "ArrowUp":
+        case 'ArrowUp':
           this.forward = true
           break
-        case "ArrowDown":
+        case 'ArrowDown':
           this.reverse = true
           break
       }
     }
 
     document.onkeyup = () => {
-      switch(event.key) {
-        case "ArrowLeft":
+      switch (event.key) {
+        case 'ArrowLeft':
           this.left = false
           break
-        case "ArrowRight":
+        case 'ArrowRight':
           this.right = false
           break
-        case "ArrowUp":
+        case 'ArrowUp':
           this.forward = false
           break
-        case "ArrowDown":
+        case 'ArrowDown':
           this.reverse = false
           break
       }
